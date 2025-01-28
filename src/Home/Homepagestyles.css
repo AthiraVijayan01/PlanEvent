@@ -1,0 +1,134 @@
+/* Event Management Page Styles */
+.event-management-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(0.98);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Header Styling */
+.event-management-container h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Form Container Styling */
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Ensuring consistent space between form groups */
+}
+
+/* Form Group Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input and Textarea Styling */
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%; /* Ensures input and textarea take full available width */
+}
+
+/* Input focus and hover effects */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  background-color: #f1f1f1;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Button Container Styling */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Button Styling */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+button[type="button"] {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  transform: scale(1.05);
+}
+
+button[type="submit"]:active,
+button[type="button"]:active {
+  transform: scale(0.98);
+}
+
+/* Animation for elements */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
