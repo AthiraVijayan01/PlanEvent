@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from './LoginForm/LoginForm';
 import HomePage from './Home/HomePage';
 import EventsPage from './EventList/EventPage';
-import './App.css';
+import BookingTicket from './Booking/BookingTicket'; 
+
+import './App.css'; // Make sure App.css exists in the src folder
 
 function App() {
   return (
@@ -17,6 +19,12 @@ function App() {
         
         {/* Events page to display created events */}
         <Route path="/EventPage" element={<EventsPage />} />
+        
+        {/* Booking page for event ticket booking */}
+        <Route path="/booking" element={<BookingTicket />} />
+        
+        {/* Payment page */}
+        
       </Routes>
     </Router>
   );
