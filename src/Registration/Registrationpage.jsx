@@ -18,8 +18,21 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here (e.g., API call)
+
+    // Validate password match
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+
+    // Form submission logic here (e.g., API call)
     console.log('Form Submitted', formData);
+
+    // Show success message
+    alert('Registration Successful!');
+
+    // Optionally, redirect to login or home page
+    // navigate('/'); // Uncomment to use react-router navigate
   };
 
   return (

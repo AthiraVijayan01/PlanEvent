@@ -1,14 +1,22 @@
 import React from 'react';
-import './LoginFormstyles.css';
 import { FaLock, FaUser } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
+import './LoginFormstyles.css';
 
- const LoginForm = () => {
-  const navigate = useNavigate();
+const LoginForm = () => {
+  const navigate = useNavigate(); // Initialize navigate
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevents default form submission behavior
-    navigate('/homepage'); // Navigates to the Homepage
+    navigate('/homepage'); // Navigates to the Homepage after successful login
+  };
+
+  const handleForgotPassword = () => {
+    navigate('/forgot-password'); // Navigates to Forgot Password page
+  };
+
+  const handleRegister = () => {
+    navigate('/register'); // Navigates to Registration page
   };
 
   return (
@@ -27,16 +35,17 @@ import { useNavigate } from 'react-router-dom';
           <label>
             <input type="checkbox" /> Remember Me
           </label>
-          <a href="#">Forgot Password</a>
+          <a href="#" onClick={handleForgotPassword}>Forgot Password?</a>
         </div>
         <button type="submit">Login</button>
         <div className="register-link">
           <p>
-            Don't have an account? <a href="#">Register</a>
+            Don't have an account? <a href="#" onClick={handleRegister}>Register</a>
           </p>
         </div>
       </form>
     </div>
   );
 };
-export default LoginForm
+
+export default LoginForm;

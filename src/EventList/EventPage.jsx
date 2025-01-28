@@ -11,9 +11,18 @@ const EventsPage = () => {
     navigate('/booking', { state: { ...event } });
   };
 
+  const handleBack = () => {
+    navigate(-1); // Navigates to the previous page
+  };
+
   return (
     <div className="events-container">
       <h2 className="events-heading">All Events</h2>
+
+      {/* Back Button */}
+      <button className="back-button" onClick={handleBack}>
+        Back
+      </button>
 
       {events.length > 0 ? (
         <div className="event-cards-grid">
@@ -24,6 +33,9 @@ const EventsPage = () => {
               <p><strong>Time:</strong> {event.time}</p>
               <p><strong>Location:</strong> {event.location}</p>
               <p><strong>Description:</strong> {event.description}</p>
+              <p><strong>Category:</strong> {event.category}</p>
+              <p><strong>Ticket Price:</strong> {event.ticketprice}</p>
+              <p><strong>Organizer Info:</strong> {event.organizerinfo}</p>
               <button
                 className="select-event-button"
                 onClick={() => handleEventSelection(event)}

@@ -12,10 +12,11 @@ const BookingTicket = () => {
     return <p>No event details found. Please select an event first.</p>;
   }
 
-  // Function to handle booking confirmation
+  // Function to handle booking confirmation and navigate to BookingDetails
   const handleBookTickets = () => {
     setBookingConfirmed(true); // Set booking to confirmed
-    // You can also navigate to another page or perform other actions here
+    // Navigate to the BookingDetails page and pass event details
+    navigate('/booking-details', { state: event });
   };
 
   // Navigate back to the events page
@@ -37,7 +38,7 @@ const BookingTicket = () => {
 
         {/* Button to book tickets */}
         <button className="booking-button proceed-to-payment" onClick={handleBookTickets}>
-          Book the Tickets
+        View Tickets
         </button>
 
         {/* Back button */}
