@@ -83,9 +83,7 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-/* .button-container {
-  display: flex;
-  gap: 20px; /* Adjust the gap between buttons */
+
 
 
 button:hover {
