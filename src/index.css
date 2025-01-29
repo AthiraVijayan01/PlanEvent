@@ -14,10 +14,10 @@ body {
   min-height: 100vh;
   /* background: url('./components/Assests/bg1.webp' )no-repeat; */
   /* background-color: rgb(104, 114, 206); */
-  background-image: url(E:\PlanIt\myevent\public\event-bg.jpg);
+  background-image: url(myevent\public\event-bg.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; 
   
   background-position: center;
   background-size: cover;
