@@ -1,134 +1,94 @@
-/* Event Management Page Styles */
+/* Make the form container full width with glass effect */
 .event-management-container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  margin: 0;
   padding: 40px;
-  background-color: #f9f9f9;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+  backdrop-filter: blur(15px); /* Blur effect for glassmorphism */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: scale(0.98);
-  animation: fadeInUp 1s ease-out forwards;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
 }
 
-/* Header Styling */
-.event-management-container h2 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: 600;
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-/* Form Container Styling */
+/* Adjust form width */
 .event-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Ensuring consistent space between form groups */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Adds space between columns */
+  width: 80%; /* Make form wider */
+  padding: 20px; /* Add padding to the form */
 }
 
-/* Form Group Styling */
-.form-group {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #555;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Input and Textarea Styling */
+/* Input Fields - Glassmorphism Effect */
 .form-group input,
-.form-group textarea {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.form-group textarea,
+.form-group select {
+  width:90%;
+  padding: 10px;/*Comfortable padding */
+  font-size: 16px; /* Readable text */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light transparent border */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Soft blur for depth */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px; /* Rounded edges */
+  color: #333; /* Dark text for contrast */
   outline: none;
   transition: all 0.3s ease-in-out;
-  width: 100%; /* Ensures input and textarea take full available width */
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2),
+              0 4px 8px rgba(0, 0, 0, 0.1); /* Inner + outer shadows */
+  margin-bottom: 20px; /* Ensures space between input fields */
 }
 
-/* Input focus and hover effects */
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #4CAF50;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+/* Placeholder Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(51, 51, 51, 0.5); /* Softer text */
 }
 
+/* Input Fields - Hover Effect */
 .form-group input:hover,
-.form-group textarea:hover {
-  background-color: #f1f1f1;
+.form-group textarea:hover,
+.form-group select:hover {
+  background: rgba(255, 255, 255, 0.25); /* Slightly brighter background */
 }
 
+/* Input Fields - Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Glowing effect */
+}
+
+/* Textarea Adjustments */
 .form-group textarea {
-  resize: vertical;
+  resize: none; /* Disable manual resizing */
+  height: 100px; /* Set height */
 }
 
-/* Button Container Styling */
-.form-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-/* Button Styling */
+/* Form Actions - Button Styling */
 button {
-  padding: 12px 25px;
-  font-size: 16px;
+  background: linear-gradient(135deg, #4CAF50, #45a049); /* Smooth green gradient */
+  color: white;
   border: none;
-  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.3s ease;
 }
+/* .button-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap between buttons */
 
-button[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  font-weight: bold;
-}
 
-button[type="button"] {
-  background-color: #f44336;
-  color: white;
-  font-weight: bold;
-}
-
-button[type="submit"]:hover,
-button[type="button"]:hover {
+button:hover {
+  background: linear-gradient(135deg, #45a049, #3e8e41); /* Darker hover */
   transform: scale(1.05);
-}
-
-button[type="submit"]:active,
-button[type="button"]:active {
-  transform: scale(0.98);
-}
-
-/* Animation for elements */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

@@ -50,9 +50,10 @@
 }
 
 /* Input Icon Styling */
+/* Input Icon Styling */
 .input-box .icon {
     position: absolute;
-    right: 25px;
+    right: 50px; /* Moved left from 25px */
     top: 50%;
     transform: translateY(-50%);
     font-size: 18px;

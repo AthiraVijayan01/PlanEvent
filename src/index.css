@@ -13,7 +13,12 @@ body {
   align-items: center;
   min-height: 100vh;
   /* background: url('./components/Assests/bg1.webp' )no-repeat; */
-  background-color: rgb(140, 173, 173);
+  /* background-color: rgb(104, 114, 206); */
+  background-image: url('E:\PlanIt\myevent\public\event-bg.jpg'); /* Ensure the correct path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
   background-position: center;
   background-size: cover;
 }

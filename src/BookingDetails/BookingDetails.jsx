@@ -48,7 +48,7 @@ const BookingDetails = () => {
         <p><strong>Date:</strong> {event.date}</p>
         <p><strong>Time:</strong> {event.time}</p>
         <p><strong>Category:</strong> {event.category}</p>
-        <p><strong>Ticket Price:</strong> {event.ticketPrice}</p>
+        <p><strong>Ticket Count:</strong> {event.ticketCount}</p>
       </div>
 
       <div className="booking-form">
@@ -69,7 +69,7 @@ const BookingDetails = () => {
 
         <div className="button-group">
           <button className="confirm-booking" onClick={handleBookingConfirmation}>Confirm Booking</button>
-          <button className="cancel-booking" onClick={handleCancelBooking}>Cancel Booking</button>
+          <button className="cancel-booking" onClick={handleCancelBooking}>Cancel </button>
           <button className="delete-booking" onClick={handleDeleteBooking}>Delete Booking</button>
           <button className="back-button" onClick={handleBack}>Back</button>
         </div>

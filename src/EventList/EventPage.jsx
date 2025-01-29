@@ -34,7 +34,7 @@ const EventsPage = () => {
               <p><strong>Location:</strong> {event.location}</p>
               <p><strong>Description:</strong> {event.description}</p>
               <p><strong>Category:</strong> {event.category}</p>
-              <p><strong>Ticket Price:</strong> {event.ticketprice}</p>
+              <p><strong>Ticket Count:</strong> {event.ticketcount}</p>
               <p><strong>Organizer Info:</strong> {event.organizerinfo}</p>
               <button
                 className="select-event-button"
