@@ -12,6 +12,7 @@ body {
   justify-self: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url(/myevent/public/event-bg.jpg);
   /* background: url('./components/Assests/bg1.webp' )no-repeat; */
   /* background-color: rgb(104, 114, 206); */
 
